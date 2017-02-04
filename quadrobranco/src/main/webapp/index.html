@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Adaptado de https://netbeans.org/kb/docs/javaee/maven-websocketapi_pt_BR.html -->
+<html>
+    <head>
+        <title>Quadro Branco</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h1>Quadro branco com WebSockets!</h1>
+
+        <h2><a href="https://netbeans.org/kb/docs/javaee/maven-websocketapi_pt_BR.html" target="_blank">Referência</a></h2>
+
+        <table>
+            <tr>
+                <td>
+                    <canvas id="myCanvas" width="150" height="150" style="border:1px solid #000000;"></canvas>
+                </td>
+                <td>
+                    <form name="formularioEntrada">
+                        <table>
+
+                            <tr>
+                                <th>Color</th>
+                                <td><input type="radio" name="cor" value="#FF0000" checked>Vermelho</td>
+                                <td><input type="radio" name="cor" value="#0000FF">Azul</td>
+                                <td><input type="radio" name="cor" value="#FF9900">Laranja</td>
+                                <td><input type="radio" name="cor" value="#33CC33">Verde</td>
+                            </tr>
+
+                            <tr>
+                                <th>Shape</th>
+                                <td><input type="radio" name="forma" value="quadrado" checked>Quadrado</td>
+                                <td><input type="radio" name="forma" value="circulo">Círculo</td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>
+
+                            <tr>
+                                <th> </th>
+                                <td><input type="submit" value="Send Snapshot" onclick="defineImageBinaria(); return false;"></td>
+                                <td><input type="checkbox" id="instant" value="Online" checked>Online</td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>                            
+                        </table>
+
+                    </form>
+                </td>
+            </tr>
+        </table>        
+        <div id="output"></div>
+        <script type="text/javascript" src="websocket.js"></script>
+        <script type="text/javascript" src="quadrobranco.js"></script>
+    </body>
+</html>
